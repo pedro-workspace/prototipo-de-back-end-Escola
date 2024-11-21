@@ -5,6 +5,7 @@ import node.Aluno
 import node.Disciplina
 import node.Formação
 
+//POR FAZER: buscar alunos por nome, buscar disciplinas por nome, buscar formações por nome
 class Escola {
     private var formações:MutableList<Formação> = mutableListOf()
     private lateinit var disciplinasDisponíveis:MutableList<Disciplina>
@@ -72,5 +73,8 @@ class Escola {
             throw FormaçãoNotFoundException("${formação.getNome()} não encontrada")
         }
     }
+    fun getFormações() = this.formações
+    fun getDisciplinasDisponíveis() = this.disciplinasDisponíveis
+    fun getAlunosTotaisMatriculados() = this.alunos
 
 }
